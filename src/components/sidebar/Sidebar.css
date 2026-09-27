@@ -1,0 +1,24 @@
+aside{
+    color: white;
+    padding: 15px;
+    height: 100vh;
+    width: 17.5%;
+    background-color: #bcb9b9;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+aside h1{
+    width: 185px;
+    border-bottom: 1px solid white;
+}
+
+aside a{
+    width: 125px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    gap: 7px;
+}

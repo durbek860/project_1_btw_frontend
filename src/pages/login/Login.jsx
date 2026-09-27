@@ -1,0 +1,67 @@
+import React from 'react';
+import { Form, Input, Button, Card, message } from 'antd';
+import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import { useNavigate } from 'react-router-dom';
+import './login.css';
+
+const Login = () => {
+  const navigate = useNavigate();
+
+  const onFinish = async (values) => {
+    try {
+      message.success('Tizimga muvaffaqiyatli kirdingiz');
+      navigate('/dashboard');
+    } catch (err) {
+      message.error(err.data?.message || 'Kirishda xatolik yuz berdi');
+    }
+  };
+
+  return (
+    <div className="auth-container">
+      <Card className="auth-card" bordered={false}>
+        <div className="auth-header">
+          <h2>Login Page</h2>
+        </div>
+
+        <Form layout="vertical" onFinish={onFinish} size="large">
+          <Form.Item
+            name="username"
+            label="Username"
+            rules={[
+              { required: true, message: 'Iltimos, username kiriting!' }
+            ]}
+          >
+            <Input
+              prefix={<UserOutlined style={{ color: 'rgba(0,0,0,.25)' }} />}
+              placeholder="Username"
+            />
+          </Form.Item>
+
+          <Form.Item
+            name="password"
+            label="Parol"
+            rules={[{ required: true, message: 'Iltimos, parolingizni kiriting!' }]}
+          >
+            <Input.Password
+              prefix={<LockOutlined style={{ color: 'rgba(0,0,0,.25)' }} />}
+              placeholder="••••••••"
+            />
+          </Form.Item>
+
+          <Form.Item style={{ marginBottom: '16px' }}>
+            <Button
+              type="primary"
+              htmlType="submit"
+              block
+              className="auth-button"
+            >
+              Submit
+            </Button>
+          </Form.Item>
+        </Form>
+      </Card>
+    </div>
+  );
+};
+
+export default Login;

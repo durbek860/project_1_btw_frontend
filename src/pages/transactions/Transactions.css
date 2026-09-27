@@ -1,0 +1,238 @@
+.content-wrapper {
+    padding: 32px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    width: 100%;
+}
+
+.dashboard-container {
+    margin-bottom: 24px;
+}
+
+.dashboard-title {
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.dashboard-card {
+    border-radius: 12px !important;
+}
+
+.card-income {
+    background-color: GreenYellow !important;
+}
+
+.card-expense {
+    background-color: Crimson !important;
+}
+
+.card-balance {
+    background-color: DodgerBlue !important;
+}
+
+.dashboard-card .ant-statistic-title span,
+.dashboard-card .ant-statistic-content,
+.dashboard-card .ant-statistic-content span {
+    color: #FFFFFF !important;
+    font-weight: bold !important;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.action-button {
+    background-color: #ff7875;
+    border-color: #ff7875;
+    border-radius: 12px;
+    height: 42px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.action-button:hover {
+    background-color: #ff9c9c !important;
+    border-color: #ff9c9c !important;
+}
+
+.filter-input {
+    height: 40px;
+    border-radius: 8px;
+}
+
+.table-custom {
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table-custom th {
+    background-color: #ffeef0 !important;
+    color: #de7284 !important;
+    font-weight: 600 !important;
+    border-bottom: none !important;
+    padding: 16px !important;
+}
+
+.table-amount-text {
+    color: #1a202c;
+    font-size: 15px;
+}
+
+.table-footer-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffeef0;
+    margin: -16px;
+    padding: 16px 48px 16px 16px;
+    border-radius: 0 0 12px 12px;
+    font-weight: bold;
+    color: #de7284;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.card-item {
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f0f0f0;
+}
+
+.card-item-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.card-label {
+    color: #8c8c8c;
+    font-size: 14px;
+}
+
+.card-value {
+    font-weight: 500;
+    font-size: 14px;
+    color: #2d3748;
+}
+
+.card-item-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 10px;
+    margin-top: 8px;
+}
+
+.text-income {
+    color: #38a169 !important;
+    font-weight: 600 !important;
+}
+
+.text-expense {
+    color: #e53e3e !important;
+    font-weight: 600 !important;
+}
+
+.empty-message {
+    text-align: center;
+    padding: 24px;
+    color: #8c8c8c;
+}
+
+.modal-input-number {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+
+    .content-wrapper .dashboard-container .ant-row,
+    .content-wrapper .statistics-row {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100% !important;
+        margin: 0 !important;
+        gap: 12px !important;
+    }
+
+    .content-wrapper .dashboard-container .ant-col,
+    .content-wrapper .dashboard-container [class*="ant-col-"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        padding: 0 !important;
+    }
+
+    .dashboard-card {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 85px;
+        padding: 12px !important;
+    }
+
+    .dashboard-card .ant-statistic-title {
+        font-size: 13px !important;
+        margin-bottom: 4px !important;
+    }
+
+    .dashboard-card .ant-statistic-content {
+        font-size: 20px !important;
+        white-space: nowrap !important;
+    }
+
+    .content-wrapper .ant-space,
+    .content-wrapper div:has(> .action-button),
+    .content-wrapper .dashboard-container+div {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+        width: 100% !important;
+    }
+
+    .content-wrapper .ant-space-item {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .action-button {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        display: block !important;
+        height: 42px !important;
+    }
+
+    .content-wrapper .ant-select {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .content-wrapper .ant-picker {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        display: inline-flex !important;
+    }
+
+    .content-wrapper .ant-select-selector,
+    .content-wrapper .ant-picker-input {
+        width: 100% !important;
+    }
+}
