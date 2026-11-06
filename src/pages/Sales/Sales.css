@@ -1,0 +1,17 @@
+.sales-page {
+    padding: 24px;
+    background-color: #f5f7fa;
+    min-height: 85vh;
+}
+
+.sales-card {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.sales-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+}

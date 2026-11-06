@@ -3,16 +3,25 @@ import { Form, Input, Button, Card, message } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 import './login.css';
+import { useEmployeeLoginMutation } from '../../context/employee';
 
 const Login = () => {
   const navigate = useNavigate();
+  const [login, { isLoading }] = useEmployeeLoginMutation();
 
   const onFinish = async (values) => {
+    console.log(values);
+
     try {
-      message.success('Tizimga muvaffaqiyatli kirdingiz');
-      navigate('/dashboard');
+      const response = await login(values).unwrap();
+
+      console.log('Success:', response);
+      message.success('successfully logged in');
+
+      navigate('/');
     } catch (err) {
-      message.error(err.data?.message || 'Kirishda xatolik yuz berdi');
+      console.error('Login error:', err);
+      message.error(err?.data?.message || err?.message || 'An error occurred during login');
     }
   };
 
@@ -28,7 +37,7 @@ const Login = () => {
             name="username"
             label="Username"
             rules={[
-              { required: true, message: 'Iltimos, username kiriting!' }
+              { required: true, message: 'Please input your username!' }
             ]}
           >
             <Input
@@ -39,8 +48,8 @@ const Login = () => {
 
           <Form.Item
             name="password"
-            label="Parol"
-            rules={[{ required: true, message: 'Iltimos, parolingizni kiriting!' }]}
+            label="Password"
+            rules={[{ required: true, message: 'Please input your password!' }]}
           >
             <Input.Password
               prefix={<LockOutlined style={{ color: 'rgba(0,0,0,.25)' }} />}
@@ -54,6 +63,7 @@ const Login = () => {
               htmlType="submit"
               block
               className="auth-button"
+              loading={isLoading}
             >
               Submit
             </Button>

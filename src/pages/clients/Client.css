@@ -1,0 +1,27 @@
+.clients-page {
+    padding: 24px;
+    background-color: #f5f7fa;
+    min-height: 85vh;
+}
+
+.clients-card {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.clients-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+}   
+
+.clients-error-message {
+    padding: 20px;
+    color: red;
+    font-weight: 500;
+}   
+
+.ant-modal-container .ant-form .ant-btn{
+    margin-top: 15px;
+}

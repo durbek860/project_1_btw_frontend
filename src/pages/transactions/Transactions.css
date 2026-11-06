@@ -6,7 +6,7 @@
 }
 
 .dashboard-container {
-    margin-bottom: 24px;
+    margin-bottom: 24px !important;
 }
 
 .dashboard-title {
@@ -159,13 +159,18 @@
 
 @media screen and (max-width: 768px) {
 
+    .content-wrapper .dashboard-container {
+        margin-bottom: 32px !important;
+        padding-bottom: 8px !important;
+    }
+
     .content-wrapper .dashboard-container .ant-row,
     .content-wrapper .statistics-row {
         display: flex !important;
         flex-direction: column !important;
         align-items: stretch !important;
         width: 100% !important;
-        margin: 0 !important;
+        margin: 0 0 16px 0 !important;
         gap: 12px !important;
     }
 
@@ -175,6 +180,7 @@
         max-width: 100% !important;
         flex: 0 0 100% !important;
         padding: 0 !important;
+        margin-bottom: 4px !important;
     }
 
     .dashboard-card {
@@ -201,6 +207,16 @@
         grid-template-columns: 1fr !important;
         gap: 12px !important;
         width: 100% !important;
+        margin-top: 32px !important;
+    }
+
+    .content-header {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 16px !important;
+        margin-top: 24px !important;
+        margin-bottom: 24px !important;
     }
 
     .content-wrapper .ant-space-item {

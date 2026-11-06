@@ -1,0 +1,30 @@
+#finished-products {
+    padding: 20px;
+}
+
+.fp-card {
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+.fp-add-btn {
+    background-color: #ff7875 !important;
+    border-color: #ff7875 !important;
+    border-radius: 8px !important;
+    font-weight: 600;
+}
+
+.fp-add-btn:hover {
+    background-color: #ff9c9c !important;
+    border-color: #ff9c9c !important;
+}
+
+.fp-error-message {
+    padding: 24px;
+    color: #e53e3e;
+    background-color: #fff5f5;
+    border: 1px solid #fed7d7;
+    border-radius: 12px;
+    margin: 24px;
+    text-align: center;
+}

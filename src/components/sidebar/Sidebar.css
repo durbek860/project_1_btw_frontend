@@ -1,24 +1,43 @@
-aside{
-    color: white;
-    padding: 15px;
+aside {
+    width: 240px;
     height: 100vh;
-    width: 17.5%;
-    background-color: #bcb9b9;
+    background-color: #0e62a7;
+}
+
+aside .logo {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #fff;
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    align-items: center;
+    justify-content: center;
 }
 
-aside h1{
-    width: 185px;
-    border-bottom: 1px solid white;
+aside .logo h1 {
+    margin: 0 !important;
+    color: #fff;
 }
 
-aside a{
-    width: 125px;
+aside .aside_links {
+    padding: 15px;
+}
+
+aside .aside_links a {
+    width: 100%;
     color: white;
     text-decoration: none;
-    font-size: 18px;
     display: flex;
-    gap: 7px;
+    align-items: center;
+    gap: 10px;
+    padding: 7px;
+    border-radius: 6px;
+    transition: .3s;
+
+    &:hover {
+        background-color: #1281dc;
+    }
+}
+
+aside a.active {
+    background-color: #1281dc;
 }
